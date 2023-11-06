@@ -22,6 +22,9 @@ namespace SLClient
             var example = new Example(options);
             example.OnConnectButtonClick(null, null);
             example.OnRunSequenceFileButtonClick(null, null);
+            var parser = new FileParser(
+                "C:\\ProgramData\\National Instruments\\Skyline\\TestPlan\\TestSequences\\INI\\TestFile.ini",
+                example);
 
             Console.ReadLine();
         }

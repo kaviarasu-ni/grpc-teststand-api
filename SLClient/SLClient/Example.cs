@@ -898,8 +898,8 @@ namespace SLClient
 
         public async void OnRunSequenceFileButtonClick(object sender, EventArgs e)
         {
-            Debug.Assert(_activeExecution == null);
-            Debug.Assert(_activeExecutionCancellationTokenSource == null);
+            // Debug.Assert(_activeExecution == null);
+            // Debug.Assert(_activeExecutionCancellationTokenSource == null);
 
             try
             {
@@ -924,7 +924,7 @@ namespace SLClient
                     {
                         Instance = _engine,
                         //SeqFilePath = _sequenceFileNameComboBox.Text,
-                        SeqFilePath = "Test.seq",
+                        SeqFilePath = "C:\\Users\\kaviarasu.selvarasu\\Desktop\\TestSequences\\LMS_Demo.seq",
                         GetSeqFileFlags = GetSeqFileOptions.GetSeqFileFindFile
                     }).ReturnValue;
 
@@ -1480,7 +1480,7 @@ namespace SLClient
             //_logTextBox.Text = string.Empty;
         }
 
-        private async void OnBreakButtonClick(object sender, EventArgs e)
+        public async void OnBreakButtonClick(object sender, EventArgs e)
         {
             await TryActionAsync(async () =>
             {
@@ -1492,7 +1492,7 @@ namespace SLClient
             }, "Breaking execution");
         }
 
-        private async void OnResumeButtonClick(object sender, EventArgs e)
+        public async void OnResumeButtonClick(object sender, EventArgs e)
         {
             await TryActionAsync(async () =>
             {
@@ -1504,7 +1504,7 @@ namespace SLClient
             }, "Resuming execution");
         }
 
-        private async void OnTerminateButtonClick(object sender, EventArgs e)
+        public async void OnTerminateButtonClick(object sender, EventArgs e)
         {
             await TryActionAsync(async () =>
             {
